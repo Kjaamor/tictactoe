@@ -7,12 +7,12 @@ describe 'Tic Tac Toe game' do
     describe 'win conditions' do
         it 'return player 1 wins given three x\'s in any row' do
             expect(check_win_condition([[:x,:x,:x],[:o,:o,""],["","",""]])).to eq("Player One Wins")
+            expect(check_win_condition([[:x,:o,:o],[:o,:o,""],[:x,:x,:x]])).to eq("Player One Wins")
         end
         it 'return player 2 wins given three o\'s in any row' do
             expect(check_win_condition([[:o,:o,:o],[:x,:x,""],[:x,"",""]])).to eq("Player Two Wins")
         end
     end
-
 end
 
 # update_grid(coordinates) (starting player is always x)
