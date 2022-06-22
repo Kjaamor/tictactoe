@@ -35,3 +35,8 @@
  a b c
 
 [a1,a2,a3,b1,b2,b]
+
+## Notes:
+
+- update_grid(coordinates) (starting player is always x)
+- calculate_score([x,x,x],[o,x,""],["","",""]) => "Player 1 wins"
