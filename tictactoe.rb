@@ -10,4 +10,22 @@ def check_win_condition(grid)
             return 'Player Two Wins'
         end
     end
+
+    if grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0]
+        grid[0][0] == :x ? "Player One Wins" : "Player Two Wins"
+    elsif grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1]
+        grid[0][1] == :x ? "Player One Wins" : "Player Two Wins"
+    elsif grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2]
+        grid[0][2] == :x ? "Player One Wins" : "Player Two Wins"
+    end
+            
+    # column_items = []
+    # grid.each_index do |i|
+    #     column_items << grid[i][0]
+    # end
+    # if column_items.uniq.size <= 1 && column_items.uniq[0] == :x
+    #     return 'Player One Wins'
+    # elsif column_items.uniq.size <= 1 && column_items.uniq[0] == :o
+    #     return 'Player Two Wins'
+    # end
 end

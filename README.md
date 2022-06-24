@@ -46,4 +46,6 @@
 - place_an_O_within_the_grid # updates the grid
 - check_win_condition(grid) # After every turn taken by human or computer
 
+- consider whether the :x/:o element of the win condition can be refactored further to include all 3 winning line position (i.e. full row, full column, diagonal)
+
 - Plan to contain everything within a class so that we have access to instance variables for things like turn
