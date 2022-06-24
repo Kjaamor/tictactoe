@@ -36,7 +36,14 @@
 
 [a1,a2,a3,b1,b2,b]
 
-## Notes:
+## Notes on possible methods:
 
 - update_grid(coordinates) (starting player is always x)
 - calculate_score([x,x,x],[o,x,""],["","",""]) => "Player 1 wins"
+  
+- place_an_x_within_the_grid # updates the grid
+- check_win_condition # After every turn taken by human or computer
+- place_an_O_within_the_grid # updates the grid
+- check_win_condition(grid) # After every turn taken by human or computer
+
+- Plan to contain everything within a class so that we have access to instance variables for things like turn
