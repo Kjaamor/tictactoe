@@ -28,4 +28,7 @@ describe 'Tic Tac Toe game' do
             expect(check_win_condition([[:x,:x,:o],[:x,:o,""],[:o,"",:x]])).to eq("Player Two Wins")
         end
     end
+    describe 'Update grid based on player moves' do
+        it 'if player 1 inputs top left as their move choice on an empty grid, the grid reflects this' do
+            expect(player_input([0,0])). #Still in progress
 end

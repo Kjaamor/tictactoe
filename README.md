@@ -46,6 +46,24 @@
 - place_an_O_within_the_grid # updates the grid
 - check_win_condition(grid) # After every turn taken by human or computer
 
+update_grid(player, position)
+    if player = 1
+        place_an_x_within_the_grid(position)
+    else
+        place_an_O_within_the_grid
+    end
+
+# Flow of program:
+- player enters co-ordinate and hits enter
+- displaying an x in that grid
+- checking for win state -break on win/drawstate
+- arbitary UX pause
+- code calculates optimum O position
+- code updates grid to include 0
+- displaying a 0 in that grid
+- checking for win state -break on win/drawstate
+- reopen terminal/UI for player
+
 - consider whether the :x/:o element of the win condition can be refactored further to include all 3 winning line position (i.e. full row, full column, diagonal)
 
 - Plan to contain everything within a class so that we have access to instance variables for things like turn
