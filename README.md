@@ -67,3 +67,10 @@ update_grid(player, position)
 - consider whether the :x/:o element of the win condition can be refactored further to include all 3 winning line position (i.e. full row, full column, diagonal)
 
 - Plan to contain everything within a class so that we have access to instance variables for things like turn
+
+# Flow of possible win-states
+- neither win/draw
+- win conditions are possible
+- win conditions are possible && draw conditions are possible
+- only draw conditions are possible
+- full grid game is a draw
