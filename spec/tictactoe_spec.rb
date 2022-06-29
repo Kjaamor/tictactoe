@@ -4,6 +4,11 @@ describe 'Tic Tac Toe game' do
     it "on start up create an empty 3x3 grid" do
         expect(create_grid).to eq ([["", "", ""],["", "", ""],["", "", ""]])
     end
+    describe 'no winner' do
+        it "return nothing given no three symbols in a row, column or diagonal" do
+            expect(check_win_condition([[:x,"",:x],[:o,:o,""],["","",""]])).not_to eq("Current Player: Wins")
+        end
+    end
     describe 'win conditions' do
         describe 'testing for complete rows' do
             it "return current player wins given three x's in the top row" do
@@ -30,12 +35,14 @@ describe 'Tic Tac Toe game' do
                 expect(check_win_condition([[:o,:x,:x],[:o,:x,""],[:o,"",:x]])).to eq("Current Player: Wins")
             end
         end
-        # it "return player 1 wins given three x's in a diagonal line from top left to bottom right" do
-        #     expect(check_win_condition([[:x,:o,:x],[:o,:x,""],[:o,"",:x]])).to eq("Player One Wins")
-        # end
-        # it "return player 2 wins given three x's in a diagonal line from top right to bottom left" do
-        #     expect(check_win_condition([[:x,:x,:o],[:x,:o,""],[:o,"",:x]])).to eq("Player Two Wins")
-        # end
+        describe 'testing for complete diagonal' do
+            it "return current player wins given three x's in a diagonal line from top left to bottom right" do
+                expect(check_win_condition([[:x,:o,:x],[:o,:x,""],[:o,"",:x]])).to eq("Current Player: Wins")
+            end
+            it "return current player wins given three x's in a diagonal line from top right to bottom left" do
+                expect(check_win_condition([[:x,:x,:o],[:x,:o,""],[:o,"",:x]])).to eq("Current Player: Wins")
+            end
+        end
     end
     # describe 'Update grid based on player moves' do
     #     it 'if player 1 inputs top left as their move choice on an empty grid, the grid reflects this' do
