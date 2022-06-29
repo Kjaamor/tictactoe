@@ -4,11 +4,7 @@ end
 
 def check_win_condition(grid)
     grid.each do |row|
-        if row.uniq.size <= 1 && row.uniq[0] == :x
-            return 'Player One Wins'
-        elsif row.uniq.size <= 1 && row.uniq[0] == :o
-            return 'Player Two Wins'
-        end
+        return are_all_three_cells_the_same(row)
     end
 
     if grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0]
@@ -21,5 +17,11 @@ def check_win_condition(grid)
         grid[0][0] == :x ? "Player One Wins" : "Player Two Wins"
     elsif grid[0][2] == grid[1][1] && grid[0][2] == grid[2][0]
         grid[0][2] == :x ? "Player One Wins" : "Player Two Wins"
+    end
+end
+
+def are_all_three_cells_the_same(cells)
+    if cells.uniq.size <= 1
+        return 'Current Player: Wins'
     end
 end

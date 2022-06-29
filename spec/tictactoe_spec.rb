@@ -5,12 +5,14 @@ describe 'Tic Tac Toe game' do
         expect(create_grid).to eq ([["", "", ""],["", "", ""],["", "", ""]])
     end
     describe 'win conditions' do
-        it "return player 1 wins given three x's in any row" do
-            expect(check_win_condition([[:x,:x,:x],[:o,:o,""],["","",""]])).to eq("Player One Wins")
-            expect(check_win_condition([[:x,:o,:o],[:o,:o,""],[:x,:x,:x]])).to eq("Player One Wins")
-        end
-        it "return player 2 wins given three o's in any row" do
-            expect(check_win_condition([[:o,:o,:o],[:x,:x,""],[:x,"",""]])).to eq("Player Two Wins")
+        describe 'testing for complete rows' do
+            it "return player 1 wins given three x's in any row" do
+                expect(check_win_condition([[:x,:x,:x],[:o,:o,""],["","",""]])).to eq("Current Player: Wins")
+                expect(check_win_condition([[:x,:o,:o],[:o,:o,""],[:x,:x,:x]])).to eq("Current Player: Wins")
+            end
+            it "return player 2 wins given three o's in any row" do
+                expect(check_win_condition([[:o,:o,:o],[:x,:x,""],[:x,"",""]])).to eq("Current Player: Wins")
+            end
         end
         it "return player 1 wins given three x's in the first column" do
             expect(check_win_condition([[:x,:o,:o],[:x,"",""],[:x,"",""]])).to eq("Player One Wins")
@@ -28,7 +30,7 @@ describe 'Tic Tac Toe game' do
             expect(check_win_condition([[:x,:x,:o],[:x,:o,""],[:o,"",:x]])).to eq("Player Two Wins")
         end
     end
-    describe 'Update grid based on player moves' do
-        it 'if player 1 inputs top left as their move choice on an empty grid, the grid reflects this' do
-            expect(player_input([0,0])). #Still in progress
+    # describe 'Update grid based on player moves' do
+    #     it 'if player 1 inputs top left as their move choice on an empty grid, the grid reflects this' do
+    #         expect(player_input([0,0])). #Still in progress
 end
