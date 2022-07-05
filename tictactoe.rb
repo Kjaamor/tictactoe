@@ -36,3 +36,9 @@ end
 def are_all_three_cells_the_same?(cells)
     cells.uniq.size <= 1 && cells[0] != ""
 end
+
+def update_grid(cell_id)
+    flat_grid = create_grid().flatten
+    flat_grid[cell_id.to_i - 1] = "X"
+    updated_grid = flat_grid.each_slice(3).to_a
+end
