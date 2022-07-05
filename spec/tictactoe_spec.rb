@@ -1,11 +1,6 @@
 require_relative '../tictactoe.rb'
 
 describe 'Tic Tac Toe game' do
-    describe 'start game UI' do
-        it "prints a welcome message when the game is loaded" do
-            expect{ start_game() }.to output("⚡️⚡️⚡️ WELCOME TO TIC TAC TOE ⚡️⚡️⚡️\n").to_stdout
-        end
-    end
     describe "Grid Initialize" do
         it "on start up create an empty 3x3 grid" do
             expect(create_grid).to eq ([["", "", ""],["", "", ""],["", "", ""]])
