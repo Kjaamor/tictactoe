@@ -14,4 +14,3 @@ describe 'start game UI' do
         expect{ start_game() }.to output(include("\nPlease pick a cell: ")).to_stdout
     end
 end
-
