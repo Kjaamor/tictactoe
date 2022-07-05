@@ -1,5 +1,6 @@
 def start_game
     puts "⚡️⚡️⚡️ WELCOME TO TIC TAC TOE ⚡️⚡️⚡️"
+    puts "Standard rules apply. Cells are numbered as shown on the below grid. Please pick the cell by its number."
 end
 
 def create_grid
