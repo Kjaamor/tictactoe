@@ -1,6 +1,6 @@
-require_relative '../tictactoe.rb'
+require_relative "../tictactoe.rb"
 
-describe 'start game UI' do
+describe "start game UI" do
     it "prints a welcome message" do
         expect{ start_game() }.to output(include("⚡️⚡️⚡️ WELCOME TO TIC TAC TOE ⚡️⚡️⚡️\n")).to_stdout
     end

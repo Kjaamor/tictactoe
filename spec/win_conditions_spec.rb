@@ -1,13 +1,13 @@
-require_relative '../tictactoe.rb'
+require_relative "../tictactoe.rb"
 
-describe 'no winner' do
+describe "no winner" do
     it "return nothing given no three symbols in a row, column or diagonal" do
         expect(check_win_condition([[:x,"",:x],[:o,:o,""],["","",""]])).not_to eq("Current Player: Wins")
     end
 end
 
-describe 'win conditions' do
-    describe 'testing for complete rows' do
+describe "win conditions" do
+    describe "testing for complete rows" do
         it "return current player wins given three x's in the top row" do
             expect(check_win_condition([[:x,:x,:x],[:o,:o,""],["","",""]])).to eq("Current Player: Wins")
         end
@@ -21,7 +21,7 @@ describe 'win conditions' do
             expect(check_win_condition([[:o,:o,:o],[:x,:x,""],[:x,"",""]])).to eq("Current Player: Wins")
         end
     end
-    describe 'testing for complete columns' do
+    describe "testing for complete columns" do
         it "return current player wins given three x's in the first column" do
             expect(check_win_condition([[:x,:o,:o],[:x,"",""],[:x,"",""]])).to eq("Current Player: Wins")
         end
@@ -32,7 +32,7 @@ describe 'win conditions' do
             expect(check_win_condition([[:o,:x,:x],[:o,:x,""],[:o,"",:x]])).to eq("Current Player: Wins")
         end
     end
-    describe 'testing for complete diagonal' do
+    describe "testing for complete diagonal" do
         it "return current player wins given three x's in a diagonal line from top left to bottom right" do
             expect(check_win_condition([[:x,:o,:x],[:o,:x,""],[:o,"",:x]])).to eq("Current Player: Wins")
         end
