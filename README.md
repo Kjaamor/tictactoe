@@ -54,6 +54,7 @@ update_grid(player, position)
     end
 
 # Flow of program:
+- display empty grid
 - player enters co-ordinate and hits enter
 - displaying an x in that grid
 - checking for win state -break on win/drawstate
@@ -74,3 +75,9 @@ update_grid(player, position)
 - win conditions are possible && draw conditions are possible
 - only draw conditions are possible
 - full grid game is a draw
+
+# Showing the grid with cell references:
+
+1|2|3
+4|5|6
+7|8|9

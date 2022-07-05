@@ -1,3 +1,7 @@
+def start_game
+    puts "⚡️⚡️⚡️ WELCOME TO TIC TAC TOE ⚡️⚡️⚡️"
+end
+
 def create_grid
     grid = [["", "", ""],["", "", ""],["", "", ""]]
 end
