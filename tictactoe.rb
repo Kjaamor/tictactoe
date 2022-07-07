@@ -2,7 +2,7 @@ class TicTacToe
     
     attr_accessor :grid
     def initialize()
-        @grid = [["", "", ""],["", "", ""],["", "", ""]]
+        @grid = [["1", "2", "3"],["4", "5", "6"],["7", "8", "9"]]
     end
 
     def update_grid(cell_id)
@@ -11,10 +11,16 @@ class TicTacToe
         @grid = flat_grid.each_slice(3).to_a
     end
 
+    def print_grid()
+        @grid.each do |row|
+            puts row.join("|")
+        end
+    end
+
     def start_game
         puts "⚡️⚡️⚡️ WELCOME TO TIC TAC TOE ⚡️⚡️⚡️"
-        puts "\nStandard rules apply. Cells are numbered as shown on the below grid. Please pick the cell by its number."
-        puts "\n1|2|3\n4|5|6\n7|8|9"
+        puts "\nStandard rules apply. Cells are numbered as shown on the below grid. Please pick the cell by its number.\n"
+        print_grid()
         print "\nPlease pick a cell: "
         # user_choice = gets.chomp
         # $stdin.gets.chomp
