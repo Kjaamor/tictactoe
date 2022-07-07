@@ -33,4 +33,13 @@ describe "Tic Tac Toe game" do
             expect{ @game.print_grid }.to output(include("1|X|3\n4|5|6\n7|8|9\n")).to_stdout
         end
     end
+
+    describe "Takes input from the player" do
+        it "successfully accepts a user input of '7' to the grid" do
+            # player_choice = gets.chomp
+            # update_grid("player_choice")
+            allow(@game).to receive(:gets).and_return("7")
+            expect{ @game.print_grid }.to output(include("1|2|3\n4|5|6\nX|8|9\n")).to_stdout
+        end
+    end
 end

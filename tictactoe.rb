@@ -23,7 +23,8 @@ class TicTacToe
         print_grid()
         print "\nPlease pick a cell: "
         # user_choice = gets.chomp
-        # $stdin.gets.chomp
+        # update_grid(user_choice)
+        # print_grid()
     end
 
     def check_win_condition(grid)
